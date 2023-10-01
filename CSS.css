@@ -1,0 +1,85 @@
+/* Reset some default styles for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Style for the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#models {
+    background-color:rgb(207, 232, 253);
+}
+ /* Style for the main content */
+
+
+/* Style for the footer */
+footer {
+    background-color: #cc2525;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+}
+
+.mainimage {
+    min-height: 400px;
+    width: 100%;
+    /*background-size: cover; */
+    background-image: url("img/su-57.jpg");
+    background-attachment: fixed;
+    background-position: center bottom;
+    display: block;
+    background-size: cover;
+}
+
+.model {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    float: left;
+    background-color: red;
+}
+
+#first {
+    float: left;
+    background-image: "C:/Users/Yerkhat/programming/Frontend/Web Technologies 1 (frontend)/Suchoi/logos/1401100717005455826731124.jpg";
+}
+ 
+#second {
+    float: left;
+    background-color: blue;
+}
+p   {color:#cc2525}
+
+#main_text {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.row {
+    margin: 0;
+    width: 100%;
+}
