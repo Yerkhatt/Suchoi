@@ -27,12 +27,12 @@ header {
 
 
 /* Style for the footer */
-/*footer {
-    background-color: #cc2525;
+footer {
+    background-color: #ff8484;
     color: #ffffff;
     text-align: center;
     padding: 10px;
-}*/
+}
 
 .container {
     width: 100%;
