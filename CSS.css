@@ -83,3 +83,139 @@ p   {color:#cc2525}
     margin: 0;
     width: 100%;
 }
+
+
+/*assignment 4*/
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+
+  /* Add CSS styles for tabs as needed */
+.tab-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Add CSS styles for accordions as needed */
+.accordion-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion-content {
+    display: none;
+}
+
+
+/* Add CSS keyframes animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#animated-element {
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    animation: bounce 2s infinite;
+}
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#timer-container {
+    margin: 20px;
+}
+
+input[type="number"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#countdown {
+    font-size: 2em;
+    margin: 10px;
+    color: #4CAF50;
+}

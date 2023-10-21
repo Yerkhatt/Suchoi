@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="CSS.css">
-    <link rel="shortcut icon" type="image/x-icon"  href="img\Emblem-Sukhoi.jpg">
+    <link rel="shortcut icon" type="image/x-icon"  href="img\favicon-32x32.png">
     
 </head>
 <body>
@@ -41,6 +41,15 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
+
+                <!-- User Icon -->
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">
+                          <img src="img\user.png" alt="User Icon" width="40">
+                      </a>
+                  </li>
+              </ul>
             </div>
         </div>
     </nav>
@@ -221,6 +230,68 @@
     
     </div>
     
+
+
+    <h1>My To-Do List</h1>
+    <div id="task-container">
+        <input type="text" id="task" placeholder="Add a new task">
+        <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="task-list"></ul>
+  
+
+
+
+    <button id="myButton" onclick="handleButtonClick()">Click me!</button>
+
+
+
+    <div class="tab-container">
+      <button class="tab-button" onclick="openTab('tab1')">Tab 1</button>
+      <button class="tab-button" onclick="openTab('tab2')">Tab 2</button>
+    </div>
+    <div id="tab1" class="tab-content">
+        Content for Tab 1.
+    </div>
+    <div id="tab2" class="tab-content">
+        Content for Tab 2.
+    </div>
+
+
+    <div class="accordion">
+      <button class="accordion-button" onclick="toggleAccordion('section1')">Section 1</button>
+      <div id="section1" class="accordion-content">
+          Content for Section 1.
+      </div>
+    </div>
+
+
+
+    <div id="animated-element"></div>
+
+
+
+
+
+    <button onclick="showAlert()">Show Alert</button>
+
+
+
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>This is a modal dialog.</p>
+      </div>
+    </div>
+    <button onclick="openModal()">Open Modal</button>
+
+    <div id="toast" class="hidden">This is a toast notification</div>
+    <button onclick="showToast()">Show Toast</button>
+
+
+    <script src="JS.js"></script>
+
     <!-- Bootstrap JavaScript (Popper.js and Bootstrap JS) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
@@ -235,28 +306,6 @@
 
 
 
-
-    <!--My code-->
-
-
-
-
-
-
-
-
-    
-    <img src=""
-    height="300" > <br>
-
-    <div class="Intro info">
-        <p>
-
-
-        </p>
-
-
-    </div>
 
     
 
