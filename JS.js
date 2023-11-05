@@ -1,36 +1,4 @@
-// Function to add a new task
-function addTask() {
-    const taskInput = document.getElementById("task");
-    const taskText = taskInput.value.trim();
 
-    if (taskText !== "") {
-        const taskList = document.getElementById("task-list");
-        const li = document.createElement("li");
-        li.innerHTML = taskText + '<button class="delete" onclick="deleteTask(this)">Delete</button><button class="complete" onclick="completeTask(this)">Complete</button>';
-        taskList.appendChild(li);
-        taskInput.value = "";
-    }
-}
-
-// Function to delete a task
-function deleteTask(button) {
-    const taskList = document.getElementById("task-list");
-    const li = button.parentElement;
-    taskList.removeChild(li);
-}
-
-// Function to mark a task as complete
-function completeTask(button) {
-    const li = button.parentElement;
-    li.classList.toggle("completed");
-}
-
-// Enter key to add a task
-document.getElementById("task").addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-        addTask();
-    }
-});
 
 
 function validateForm() {
@@ -125,3 +93,112 @@ function closeModal() {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    
+    
+    const linksToMonitor = document.querySelectorAll("a.info");
+
+    // Define data for different link IDs, including image URLs
+    const linkData = {
+        link_SU30: {
+            leftText: "Left Text for Link A",
+            imageText: "SU30",
+            rightText: "Right Text for Link A",
+            imageUrl: "img/Sukhoi-Su-30-warplane-sky.jpg"
+        },
+        link_SU34: {
+            leftText: "Left Text for Link B",
+            imageText: "Text Section for Link B",
+            rightText: "Right Text for Link B",
+            imageUrl: "linkB-image.jpg"
+        }
+        // Add more data for other links as needed
+    };
+
+    var iframe = document.getElementById("externalPage");
+    var iframeDocument = iframe.contentDocument; // Access the content of the iframe
+    linksToMonitor.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            const linkId = this.id;
+
+            // Check if the clicked link ID exists in linkData
+            if (linkData[linkId]) {
+                const data = linkData[linkId];
+
+                // Update the content and image based on the link data
+                document.getElementById("leftText").textContent = data.leftText;
+                document.getElementById("imageText").innerHTML = `<h3>${data.imageText}</h3><p>Your text goes here.</p>`;
+                document.getElementById("rightText").textContent = data.rightText;
+
+                // Change the image source
+                document.getElementById("topImage").src = data.imageUrl;
+            } else {
+                // Handle cases where the link ID is not recognized
+                alert("Link ID not recognized");
+            }
+        });
+    });
+});
+
+
+const info_links = document.querySelectorAll('.info');
+
+info_links.forEach(item => {
+  item.addEventListener('mouseover', (event) => {
+    // highlight the mouseover target
+    event.target.style.color = "orange";
+
+
+  });
+});
+
+info_links.forEach(item => {
+    item.addEventListener('mouseout', (event) => {
+      // highlight the mouseover target
+      event.target.style.color = "black";
+  
+
+    });
+  });
+
+
+
+// Get a reference to the button element
+var button = document.getElementById("about_us_wiki");
+
+// Add a "mouseover" event listener to change the button's style on hover
+button.addEventListener("mouseover", function() {
+    button.style.backgroundColor = "#5edd62"; // Change background color on hover
+    button.style.color = "#000"; // Change text color on hover
+});
+
+// Add a "mouseout" event listener to reset the button's style when the mouse leaves
+button.addEventListener("mouseout", function() {
+    button.style.backgroundColor = "#3498db"; // Reset background color
+    button.style.color = "#fff"; // Reset text color
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var button = document.getElementById("about_us_wiki");
+
+    // Function to animate the button on click
+    function animateButton() {
+        button.style.transform = "scale(1.1)"; // Scale the button up
+        setTimeout(function() {
+            button.style.transform = "scale(1)"; // Reset the scale
+        }, 200); // Delay for 200 milliseconds
+    }
+
+    // Add a click event listener to trigger the animation
+    button.addEventListener("click", animateButton);
+});
+
+
+const soundBT = document.getElementById('waegewg');
+const audio = new Audio('sound/sound.mp3');
+
+soundBT.addEventListener('click', () => {
+  audio.play();
+  button.style.backgroundColor = 'lightgreen';
+});

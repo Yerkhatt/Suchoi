@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Suchoi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="CSS.css">
+    <link rel="shortcut icon" type="image/x-icon"  href="img\favicon-32x32.png">
+    
+</head>
+<body> 
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img\Emblem-Sukhoi.jpg" alt="Logo" width="40">
+                Suchoi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> <img src="img\house_icon_199063.png" width=25> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html"><img src="img\user.png" alt="User Icon" width="25"> About Us</a>
+                    </li>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Service 1</a>
+                            <a class="dropdown-item" href="#">Service 2</a> 
+                            <a class="dropdown-item" href="#">Service 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><img src="img\Phone_font_awesome.svg.png" width=25> Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <!-- Left Section for Text -->
+                <div class="text-body">
+                    The Sukhoi Su-30 (Russian: Сухой Су-30; NATO reporting name: Flanker-C/G/H) is a twin-engine, two-seat supermaneuverable fighter aircraft developed in the Soviet Union by Russia's Sukhoi Aviation Corporation. It is a multirole fighter for all-weather, air-to-air and air interdiction missions.
+
+                    The Su-30 started as an internal development project in the Sukhoi Su-27 family by Sukhoi. From the Su-27UB two-seat trainer, the Su-27PU heavy interceptor was developed. The design plan was revamped and the Su-27PU was renamed to Su-30 by the Russian Defense Ministry in 1996. Of the Flanker family, the Su-27, Su-30, Su-33, Su-34 and Su-35 have been ordered into limited or serial production by the Russian Defense Ministry. Later, different export requirements split the Su-30 into two distinct version branches, manufactured by competing organisations: KnAAPO and the Irkut Corporation, both of which come under the Sukhoi aerospace group's umbrella.
+                    
+                    KnAAPO manufactures the Su-30MKK and the Su-30MK2, which were designed for and sold to China, and later Indonesia, Uganda, Venezuela, and Vietnam. Due to KnAAPO's involvement from the early stages of developing the Su-35, these are basically a two-seat version of the mid-1990s Su-35. The Chinese chose an older but lighter radar so the canards could be omitted in return for increased payload. It is a fighter with both air supremacy and attack capabilities, generally similar to the U.S. F-15E Strike Eagle.[8]
+                    
+                    Irkut traditionally served the Soviet Air Defense and, in the early years of Flanker development, was given the responsibility of manufacturing the Su-27UB, the two-seat trainer version. When India showed interests in the Su-30, Irkut offered the multirole Su-30MKI, which originated as the Su-27UB modified with avionics appropriate for fighters. Along with its ground-attack capabilities, the series adds features for the air-superiority role, such as canards, thrust-vectoring, and a long-range phased-array radar. Its derivatives include the Su-30MKM, MKA, and SM for Malaysia, Algeria, and Russia respectively. The Russian Aerospace Forces operates several Su-30s and has ordered the Su-30SM variant as well.            </div>
+            </div>
+            <div class="col-5">
+                <img src="img\Sukhoi-Su-30-warplane-sky.jpg" alt="Image" id="topImage" class="img-fluid img-thumbnail float-right" >
+                <!-- Section for Text under the Image -->
+                <div class="text-body">
+                    Role:	Multirole fighter, air superiority fighter <br>
+                    National origin:	Soviet Union<br>
+                    Russia:<br>
+                    Design group:	Sukhoi<br>
+                    Built by:	KnAAPO, Irkut Corporation<br>
+                    First flight:	31 December 1989; 33 years ago<br>
+                    Introduction:	1996<br>
+                    Status:	In service<br>
+                    Primary users:	Russian Aerospace Forces,Algerian Air Force, Armenian Air Force, Vietnam People's Air Force<br>
+                    Produced:	1992–present<br>
+                    Number built:	630+<br>
+                    Developed from:	Sukhoi Su-27<br>
+                    Variants:	Sukhoi Su-30MKI, Sukhoi Su-30MKK, Sukhoi Su-30MKM, Sukhoi Su-30MKA, Shenyang J-16<br>
+                    <button id="myButton">jet sound</button>
+                  
+                    <script>
+                      const button = document.getElementById('myButton');
+                      const audioLink = document.getElementById('audioLink');
+                      const audio = new Audio();
+                  
+                      audio.src = 'sound/sound.mp3';
+                  
+                      button.addEventListener('click', () => {
+                        audio.play();
+                        button.style.backgroundColor = 'lightgreen';
+                      });
+                  
+                      audioLink.addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent the default link behavior
+                        audio.play();
+                      });
+                    </script>
+                    
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <!-- Right Section for Text -->
+                <p id="rightText"></p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="JS.js"></script>
+    <!-- Bootstrap JavaScript (Popper.js and Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+    
+
+    
+</body>
+
+</html>
