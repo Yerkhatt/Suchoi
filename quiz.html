@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Suchoi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="CSS.css">
+    <link rel="shortcut icon" type="image/x-icon"  href="img\favicon-32x32.png">
+    <script src="JS.js"></script>
+    <style>
+
+.game-container {
+      list-style: none;
+      padding: 0;
+    }
+
+    .game-item {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      margin: 5px;
+      cursor: grab;
+    }
+
+    .dropzone {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 2px dashed #aaa;
+      border-radius: 5px;
+      margin-top: 20px;
+    }  
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+    }
+
+    .draggable-list {
+      padding: 5px;
+    }
+
+    .game {
+      list-style: none;
+      padding: 10px;
+      margin: 5px;
+      background-color: #cfd8dc;
+      border: 1px solid #b0bec5;
+      color: #263238;
+      cursor: grab;
+    }
+
+    .over {
+      background-color: #90a4ae;
+    }
+
+
+    table {
+      max-width:640px;
+      margin: auto;
+      margin-bottom: 20px;
+      /* border: 1px solid #b0bec5; */
+    }
+
+    th, td {
+      padding: 10px 10px;
+    }
+
+    td {
+      border: 1px solid #90a4ae;
+    }
+
+    tr:nth-child(even) {
+      background-color: #cfd8dc;
+    }
+
+
+
+    button:hover {
+      background-color: #516a75;
+    }
+
+    #endMessage {
+      display: none;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-lig
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img\Emblem-Sukhoi.jpg" alt="Logo" width="40">
+                Suchoi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> <img src="img\house_icon_199063.png" width=25> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html"><img src="img\user.png" alt="User Icon" width="25"> About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><img src="img\Phone_font_awesome.svg.png" width=25> Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html"><img src="img\5694744.png" alt="Quiz Icon" width="25"> Quiz</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="login.html"><img src="img\png-transparent-computer-icons-login-login-button-miscellaneous-angle-text-thumbnail.png" alt="Quiz Icon" width="25"> Editor</a>
+                  </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <h1> Matching Game</h1>
+
+  <main class="container">
+    <div>
+      <ul class="draggable-list">
+        <li class='game' id="e1" draggable="true">5-th gen. figher jet</li>
+        <li class='game' id="e2" draggable="true">Tactical strike jet</li>
+        <li class='game' id="e3" draggable="true">Close air support jet</li>
+        <li class='game' id="e4" draggable="true">Jet nicknamed "Flanker"</li>
+        <li class='game' id="e5" draggable="true">Jet nicknamed "Super Flanker"</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="draggable-list">
+        <li class='game' id="s2" draggable="true">SU-34</li>
+        <li class='game' id="s5" draggable="true">SU-35</li>
+        <li class='game' id="s1" draggable="true">SU-57 </li>
+        <li class='game' id="s3" draggable="true">SU-25</li>
+        <li class='game' id="s4" draggable="true">SU-27</li>
+      </ul>
+    </div>
+  </main>
+
+  <div id="endMessage">
+    <h3>Well done!</h3>
+    <table>
+      <tr>
+        <th>Questions</th>
+        <th>Model</th>
+      </tr>
+      <tr>
+        <td>5-th gen. figher jet</td>
+        <td>SU-57</td>
+      </tr>
+      <tr>
+        <td>Tactical strike jet</td>
+        <td>SU-34</td>
+      </tr>
+      <tr>
+        <td>Close air support jet</td>
+        <td>SU-25</td>
+      </tr>
+      <tr>
+        <td>Jet nicknamed "Flanker"</td>
+        <td>SU-27</td>
+      </tr>
+      <tr>
+        <td>Jet nicknamed "Super Flanker"</td>
+        <td>SU-35</td>
+      </tr>
+    </table>
+
+    <button style="   
+      margin: auto;
+      cursor: pointer;
+      display: block;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+      background-color: #607d8b;
+      color: #fff;" onclick="playAgain()">Play Again</button>
+  </div>
+  <script>
+    const draggableListItems = document.querySelectorAll('.draggable-list li');
+    const endMessage = document.getElementById('endMessage');
+
+    // current phrase being dragged
+    let selectedId;
+
+    // target phrase
+    let dropTargetId;
+
+    // counter for correct phrases
+    let matchingCounter = 0;
+
+    addEventListeners();
+
+    function dragStart() {
+      selectedId = this.id;
+    }
+
+    function dragEnter() {
+      this.classList.add('over');
+    }
+
+    function dragLeave() {
+      this.classList.remove('over');
+    }
+
+    function dragOver(ev) {
+      ev.preventDefault();
+    }
+
+    function dragDrop() {
+      dropTargetId = this.id;
+
+      if (checkForMatch(selectedId, dropTargetId)) {
+        document.getElementById(selectedId).style.display = 'none';
+        document.getElementById(dropTargetId).style.display = 'none';
+        matchingCounter++;
+      } else if (checkForMatch2(selectedId, dropTargetId)) {
+        document.getElementById(selectedId).style.display = 'none';
+        document.getElementById(dropTargetId).style.display = 'none';
+        matchingCounter++;
+      }
+
+      if (matchingCounter === 5) {
+        endMessage.style.display = 'block';
+      }
+
+      this.classList.remove('over');
+    }
+
+    function checkForMatch(selected, dropTarget) {
+      switch (selected) {
+        case 'e1':
+          return dropTarget === 's1' ? true : false;
+
+        case 'e2':
+          return dropTarget === 's2' ? true : false;
+
+        case 'e3':
+          return dropTarget === 's3' ? true : false;
+
+        case 'e4':
+          return dropTarget === 's4' ? true : false;
+
+        case 'e5':
+          return dropTarget === 's5' ? true : false;
+
+        default:
+          return false;
+      }
+    }
+
+    function checkForMatch2(selected, dropTarget) {
+      switch (selected) {
+        case 's1':
+          return dropTarget === 'e1' ? true : false;
+
+        case 's2':
+          return dropTarget === 'e2' ? true : false;
+
+        case 's3':
+          return dropTarget === 'e3' ? true : false;
+
+        case 's4':
+          return dropTarget === 'e4' ? true : false;
+
+        case 's5':
+          return dropTarget === 'e5' ? true : false;
+
+        default:
+          return false;
+      }
+    }
+
+    function playAgain() {
+      matchingCounter = 0;
+      endMessage.style.display = 'none';
+      draggableListItems.forEach(item => {
+        document.getElementById(item.id).style.display = 'block';
+      })
+    }
+
+    function addEventListeners() {
+      draggableListItems.forEach (item => {
+        item.addEventListener('dragstart', dragStart);
+        item.addEventListener('dragenter', dragEnter);
+        item.addEventListener('drop', dragDrop);
+        item.addEventListener('dragover', dragOver);
+        item.addEventListener('dragleave', dragLeave);
+      })
+    }
+  </script>
+
+
+
+
+    <div class="panel">
+      <h1>Quiz ! (11 questions)</h1>
+      <div class="question" id="ques"></div>
+      <div class="options" id="opt"></div>
+      <button onclick="checkAns()" id="quizBtn">SUBMIT</button>
+      <div id="score"></div>
+      
+  </div>
+  <script>
+    // Questions that will be asked
+    const Questions = [{
+        q: "When Suchoi aerospace company was founded?",
+        a: [{ text: "1988", isCorrect: false },
+        { text: "1940", isCorrect: true },
+        { text: "1961", isCorrect: false },
+        { text: "1958", isCorrect: false }
+        ]
+    
+    },
+    {
+        q: "Which type of aircraft is Sukhoi best known for manufacturing?",
+        a: [{ text: " Commercial airliners", isCorrect: false, isSelected: false },
+        { text: "Helicopters", isCorrect: false },
+        { text: "Military fighter jets", isCorrect: true },
+        { text: "Cargo planes", isCorrect: false }
+        ]
+    
+    },
+    {
+        q: "Sukhoi is a division of which Russian aerospace company?",
+        a: [{ text: "Tupolev", isCorrect: false },
+        { text: "MiG", isCorrect: false },
+        { text: "Rostec", isCorrect: false },
+        { text: "United Aircraft Corporation", isCorrect: true }
+        ]
+    
+    },
+
+    {
+        q: "Which Sukhoi aircraft is nicknamed the <<Flanker>>?",
+        a: [{ text: " Su-27", isCorrect: true, isSelected: false },
+        { text: "Su-35", isCorrect: false },
+        { text: "Su-57", isCorrect: false },
+        { text: " Su-25", isCorrect: false }
+        ]
+    
+    },
+
+    {
+        q: "Sukhoi collaborated with which Indian aerospace company in the development of the Su-30MKI fighter jet?",
+        a: [{ text: " Hindustan Aeronautics Limited (HAL)", isCorrect: true, isSelected: false },
+        { text: "Bharat Electronics Limited (BEL)", isCorrect: false },
+        { text: "Indian Space Research Organisation (ISRO)", isCorrect: false },
+        { text: "Tata Advanced Systems Limited (TASL)", isCorrect: false }
+        ]
+    
+    },
+
+    {
+        q: "Which Sukhoi aircraft is a twin-engine, all-weather air superiority fighter widely used by various countries around the world?",
+        a: [{ text: " Su-25 Frogfoot", isCorrect: false, isSelected: false },
+        { text: "Su-57", isCorrect: false },
+        { text: "Su-30MKI", isCorrect: true },
+        { text: "Su-34", isCorrect: false }
+        ]
+    
+    },
+
+    {
+        q: "Sukhoi designed the Su-35 as an upgraded version of which earlier model?",
+        a: [{ text: " Su-25 Frogfoot", isCorrect: false, isSelected: false },
+        { text: "Su-57", isCorrect: false },
+        { text: "Su-30MKI", isCorrect: false },
+        { text: "Su-27", isCorrect: true }
+        ]
+    
+    },
+
+    {
+        q: "In collaboration with what other company did Sukhoi develop the Su-30MKI, a variant of the Su-30 fighter jet?",
+        a: [{ text: " Dassault Aviation", isCorrect: false, isSelected: false },
+        { text: "Lockheed Martin", isCorrect: false },
+        { text: "Hindustan Aeronautics Limited (HAL)", isCorrect: true },
+        { text: "Northrop Grumman", isCorrect: false }
+        ]
+    
+    },
+
+    {
+        q: "Sukhoi is a key player in the development of the Russian fifth-generation fighter aircraft. What is the name of this stealthy and advanced jet?",
+        a: [{ text: " MiG-35", isCorrect: false, isSelected: false },
+        { text: "Su-57", isCorrect: true },
+        { text: " Su-30MKI", isCorrect: false },
+        { text: "Su-25 Frogfoot", isCorrect: false }
+        ]
+    
+    },
+
+    {
+        q: "Approximately how many units of the Sukhoi Su-27, the widely-used air superiority fighter, have been produced worldwide?",
+        a: [{ text: "500", isCorrect: false, isSelected: false },
+        { text: "1,000", isCorrect: false },
+        { text: "2,500", isCorrect: true },
+        { text: " 3,000", isCorrect: false }
+        ]
+    
+    },
+
+    {
+        q: "As of the latest data, how many units of the Sukhoi Su-35, a fourth-generation fighter, have been produced for both domestic and international customers?",
+        a: [{ text: " 50", isCorrect: false, isSelected: false },
+        { text: "200", isCorrect: true },
+        { text: "500", isCorrect: false },
+        { text: "800", isCorrect: false }
+        ]
+    
+    }
+    
+    ]
+    
+    let currQuestion = 0
+    let score = 0
+    
+    function loadQues() {
+        const question = document.getElementById("ques")
+        const opt = document.getElementById("opt")
+    
+        question.textContent = Questions[currQuestion].q;
+        opt.innerHTML = ""
+    
+        for (let i = 0; i < Questions[currQuestion].a.length; i++) {
+            const choicesdiv = document.createElement("div");
+            const choice = document.createElement("input");
+            const choiceLabel = document.createElement("label");
+    
+            choice.type = "radio";
+            choice.name = "answer";
+            choice.value = i;
+    
+            choiceLabel.textContent = Questions[currQuestion].a[i].text;
+    
+            choicesdiv.appendChild(choice);
+            choicesdiv.appendChild(choiceLabel);
+            opt.appendChild(choicesdiv);
+        }
+    }
+    
+    loadQues();
+    
+    function loadScore() {
+        const totalScore = document.getElementById("score")   
+        totalScore.textContent = `You scored ${score} out of ${Questions.length}`
+    }
+    
+    
+    function nextQuestion() {
+        if (currQuestion < Questions.length - 1) {
+            currQuestion++;
+            loadQues();
+        } else {
+            document.getElementById("opt").remove()
+            document.getElementById("ques").remove()
+            document.getElementById("quizBtn").remove()
+            loadScore();
+        }
+    }
+    
+    function checkAns() {
+        const selectedAns = parseInt(document.querySelector('input[name="answer"]:checked').value);
+    
+        if (Questions[currQuestion].a[selectedAns].isCorrect) {
+            score++;
+            console.log("Correct")
+            nextQuestion();
+        } else {
+            nextQuestion();
+        }
+    }
+  </script>
+
+<div id = 'blank_space'></div>
+
+  <div class="footer">
+    <p class="footer_text">&copy; Suchoi</p>
+  </div>
+
+  
+
+
+
+  <script src="JS.js"></script>
+
+</body>
+</html>

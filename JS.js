@@ -202,3 +202,81 @@ soundBT.addEventListener('click', () => {
   audio.play();
   button.style.backgroundColor = 'lightgreen';
 });
+
+
+// Get the modal element and the buttons that open and close it
+var modal = document.getElementById('myModal');
+var openModalBtn = document.getElementById('openModalBtn');
+var closeModalBtn = document.getElementById('closeModalBtn');
+
+// Function to open the modal
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Event listeners for the open and close buttons
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);
+
+// Close the modal if the user clicks outside of it
+window.addEventListener('click', function (event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+// Close the modal if the user presses the Escape key
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+
+// Scroll to top button
+var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Show/hide scroll to top button based on scroll position
+window.addEventListener('scroll', function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+// Scroll to top function
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  showStep(1);
+});
+
+function showStep(stepNumber) {
+  var formSteps = document.querySelectorAll('.form-step');
+  
+  formSteps.forEach(function (step) {
+    step.classList.remove('active');
+  });
+
+  var currentStep = document.querySelector('.form-step[data-step="' + stepNumber + '"]');
+  currentStep.classList.add('active');
+}
+
+function nextStep(currentStep) {
+  var nextStep = currentStep + 1;
+  showStep(nextStep);
+}
+
+function prevStep(currentStep) {
+  var prevStep = currentStep - 1;
+  showStep(prevStep);
+}
